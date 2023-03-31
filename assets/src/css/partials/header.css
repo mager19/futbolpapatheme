@@ -1,0 +1,28 @@
+.topbar {
+    @apply bg-secondary text-white h-8 flex items-center;
+
+    a,
+    a:visited {
+        @apply text-white;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .social__icons {
+        a,
+        a:visited {
+            @apply text-white;
+            div {
+                &:before {
+                    @apply text-white;
+                }
+            }
+        }
+    }
+
+    span {
+        @apply font-bold;
+    }
+}

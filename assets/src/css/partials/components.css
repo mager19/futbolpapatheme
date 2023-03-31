@@ -1,0 +1,104 @@
+.btn {
+    @apply flex items-center justify-center py-3 px-10 lg:px-20 font-bold;
+    border: 1px solid #1f8a70;
+    border-radius: 25px;
+    letter-spacing: 0.5px;
+
+    &__primary {
+        @apply bg-secondary text-white;
+    }
+}
+
+.grid__posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @screen md {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    @screen lg {
+        display: grid;
+        height: 424px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "a a b b"
+            "a a c d";
+    }
+
+
+
+    .grid__posts__item1 {
+        @screen lg{
+            grid-area: a;
+        }
+
+        .title {
+            @apply title--5 lg:title--4;
+            text-transform: initial !important;
+        }
+    }
+    .grid__posts__item2 {
+        @screen lg{
+            grid-area: b;
+        }
+
+        .title {
+            @apply title--5 lg:title--5;
+            text-transform: initial !important;
+        }
+    }
+    .grid__posts__item3 {
+        @screen lg {
+            grid-area: c;
+        }
+
+        .title {
+            @apply title--5 lg:title--5;
+            text-transform: initial !important;
+        }
+    }
+    .grid__posts__item4 {
+        @screen lg {
+            grid-area: d;
+        }
+
+        .title {
+            @apply title--5 lg:title--5;
+            text-transform: initial !important;
+        }
+    }
+}
+
+.tag {
+    @apply bg-secondary text-white inline-block py-1 px-2 font-bold font-manrope;
+}
+
+.grid__posts__item {
+    @apply backgroundSettings relative flex items-end pb-2 px-4 h-56 w-full lg:h-auto;
+
+    &:before {
+        @apply absolute w-full h-full left-0 top-0;
+        content: "";
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .content {
+        @apply relative flex;
+
+        .title {
+            @apply text-white mb-0 mt-1;
+        }
+
+        span {
+            @apply title--button text-primary-lighter font-manrope;
+            font-weight: bold !important;
+            letter-spacing: 0.5px;
+            text-transform: capitalize !important;
+        }
+    }
+}

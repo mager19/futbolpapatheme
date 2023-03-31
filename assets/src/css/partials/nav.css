@@ -1,0 +1,44 @@
+.site__nav {
+    ul {
+        @apply flex justify-end items-center mb-0;
+
+        li {
+            @apply mb-0 list-none;
+
+            &:not(:first-child) {
+                @apply ml-8;
+            }
+
+            a {
+                @apply text-secondary text-xl hover:text-primary font-semibold  hover:decoration-primary;
+            }
+        }
+    }
+}
+
+.trending__bar {
+    @apply hidden md:flex;
+}
+
+.trending__bar--title {
+    @apply lg:flex;
+    span {
+        @apply text-[11px] lg:text-[20px] font-bold text-center;
+    }
+}
+
+.trending__bar__container {
+    @apply bg-secondary text-white h-[30px];
+
+    .trending__bar--content {
+        @apply flex items-center;
+
+        a,
+        a:visited {
+            @apply text-white;
+        }
+        p {
+            @apply text-white flex items-center font-semibold text-[11px] lg:text-[1rem] mb-0;
+        }
+    }
+}

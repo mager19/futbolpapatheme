@@ -1,0 +1,62 @@
+{
+    "name": "tailwindbase",
+    "version": "1.0.0",
+    "description": "WordPress base theme using TailwindCSS ❤",
+    "main": "index.js",
+    "scripts": {
+        "prod": "webpack --mode production",
+        "dev": "webpack --mode development --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mager19/tailwindBase.git"
+    },
+    "keywords": [
+        "Tailwind",
+        "WordPress",
+        "Theme",
+        "CSS"
+    ],
+    "author": "@mager19 + @yavallejo",
+    "dependencies": {
+        "@babel/polyfill": "^7.11.5",
+        "@tailwindcss/line-clamp": "^0.4.2",
+        "@tailwindcss/typography": "^0.5.9"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.21.0",
+        "@babel/core": "^7.21.3",
+        "@babel/preset-env": "^7.20.2",
+        "autoprefixer": "^10.4.14",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-loader": "^9.1.2",
+        "browser-sync": "^2.29.1",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "css-loader": "^6.7.3",
+        "css-minimizer-webpack-plugin": "^4.2.2",
+        "file-loader": "^6.2.0",
+        "jquery": "^3.6.4",
+        "mini-css-extract-plugin": "^2.7.5",
+        "postcss": "^8.4.21",
+        "postcss-import": "^15.1.0",
+        "postcss-loader": "^7.1.0",
+        "postcss-nested": "^6.0.1",
+        "postcss-nesting": "^11.2.1",
+        "postcss-preset-env": "^8.0.1",
+        "postcss-rem": "^2.0.2",
+        "postcss-simple-vars": "^7.0.1",
+        "precss": "^4.0.0",
+        "slick-carousel": "^1.8.1",
+        "style-loader": "^3.3.2",
+        "tailwindcss": "^3.2.7",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.76.3",
+        "webpack-cli": "^5.0.1",
+        "webpack-dev-server": "^4.13.1"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
+    }
+}

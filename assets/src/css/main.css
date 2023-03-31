@@ -1,0 +1,22 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@import "./partials/base.css";
+@import "./partials/nav.css";
+@import "./partials/footer.css";
+@import "./partials/icons.css";
+@import "./partials/header.css";
+@import "./partials/components.css";
+
+@import "tailwindcss/utilities";
+
+
+@layer base{
+    .animationSettings{
+        @apply duration-500 ease-linear transition-all;
+    }
+
+    .background-settings{
+        @apply bg-no-repeat bg-cover bg-center;
+    }
+}
