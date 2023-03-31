@@ -75,7 +75,7 @@
 }
 
 .tag {
-    @apply bg-secondary text-white inline-block py-1 px-2 font-bold font-manrope;
+    @apply bg-secondary text-white inline-flex items-center justify-center py-0 px-2 font-bold font-manrope;
 }
 
 .grid__posts__item {
@@ -101,4 +101,20 @@
             text-transform: capitalize !important;
         }
     }
+}
+
+.title__section{
+    @apply pb-2 relative;
+    border-bottom: 2px solid theme('colors.text');
+
+    &:before{
+        @apply bg-secondary absolute;
+        content:'';
+        display: block;
+        width: 50px;
+        height:6px;
+        bottom:-4px;
+        
+    }
+    
 }

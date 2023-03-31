@@ -818,7 +818,7 @@ blockquote {
     h3,
     h4,
     h5 {
-        @apply mt-8 text-dark-1;
+        @apply text-dark-1;
     }
 }
 
