@@ -51,29 +51,33 @@ get_header(); ?>
     <div class="content__main pb-8">
         <div class="container mx-auto">
             <div class="flex px-4 md:px-0 gap-4">
-                <div class="content__main--left md:w-9/12 bg-slate-100">
-                    <?php
-                    $args = array('post_type' => 'post', 'posts_per_page' => 10);
-                    $loop = new WP_Query( $args );
-                    if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>  
-                    <?php the_post_thumbnail($size='thumbnail'); ?>
-                        <h4><?php the_title(); ?></h4>
+                <!-- THOUGHT OF THE MONTH -->
+                <div class="content__main--left md:w-8/12 bg-primary-lighter py-8 px-6">
+                    <?php get_template_part('template-parts/thought', 'month'); ?>
 
-                    <?php endwhile; ?>
-                    <!-- post navigation -->
-                    <?php else: ?>
-                    <!-- no posts found -->
-                    <?php endif; ?>
+                    <div class="featured__post mt-4">
+                        <!-- Featured Posts -->
+                        <?php get_template_part(
+                            'template-parts/title',
+                            'section',
+                            array(
+                                'title' => 'FEATURED POSTS',
+                                'links' => true
+                            )
+                        ); ?>
+                    </div>
                 </div>
 
-                <div class="aside hidden md:block md:w-3/12 bg-slate-100">
+
+
+                <div class="aside hidden md:block md:w-4/12 bg-slate-100">
                     <h5>Categories</h5>
                     <?php
                     $categories = get_categories(array(
                         'orderby' => 'name',
                         'order'   => 'ASC'
                     ));
-                    
+
 
                     foreach ($categories as $category) {
                         $category_link = sprintf(
@@ -84,7 +88,6 @@ get_header(); ?>
                         );
                         echo '<p>' . $category_link;
                         echo ' (' . $category->count . ')</p>';
-                        
                     } ?>
                 </div>
             </div>
