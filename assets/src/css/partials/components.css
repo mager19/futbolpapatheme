@@ -5,7 +5,11 @@
     letter-spacing: 0.5px;
 
     &__primary {
-        @apply bg-secondary text-white;
+        @apply bg-secondary text-white hover:opacity-90;
+
+        &:visited{
+            @apply text-white;
+        }
     }
 }
 

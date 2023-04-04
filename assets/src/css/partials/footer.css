@@ -83,13 +83,22 @@
 }
 
 .cta {
-    @apply h-[200px] lg:h-[340px] flex items-center;
+    @apply h-[200px] lg:h-[340px] flex items-center relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
+    &:before{
+        background-color: rgba(0,0,0, 0.5);
+        content:'';
+        display:block;
+        position: absolute;
+        width: 100%;
+        height:100%;
+    }
+
     .about-cta {
-        @apply flex flex-col items-center justify-center text-center w-full lg:flex-row lg:justify-between lg:text-left;
+        @apply flex flex-col items-center justify-center text-center w-full lg:flex-row lg:justify-between lg:text-left relative;
     }
     .title-entry {
         @apply text-white title--4 lg:title--2 mb-2 lg:mb-4;
