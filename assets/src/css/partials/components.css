@@ -137,18 +137,17 @@
             "a a d";
     }
 
-    .grid__posts__item1{
-        
+    .grid__posts__item1{        
         grid-area: a; 
     }
-    &--2{
+    .grid__posts__item2{
         grid-area: b; 
 
     }
-    &--3{
+    .grid__posts__item3{
         grid-area: c; 
     }
-    &--4{
+    .grid__posts__item4{
         grid-area: d; 
     }
 }
