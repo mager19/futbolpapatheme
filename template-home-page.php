@@ -122,8 +122,47 @@ get_header(); ?>
                         <?php endif; ?>
                     </div>
 
-                    
+                    <!-- **** -->
+                    <!-- Latest Posts -->
+                    <?php
+                    $showLatestPosts = get_field('show');
+                    if ($showLatestPosts) { ?>
+                        <div class="latest__posts__section flex flex-wrap mt-6 lg:mt-10">
+                            <div class="titleSection w-full">
+                                <!-- Featured Posts -->
+                                <?php get_template_part(
+                                    'template-parts/title',
+                                    'section',
+                                    array(
+                                        'title' => "Latest Posts",
+                                        'links' => true
+                                    )
+                                ); ?>
+                            </div>
 
+                            <?php
+                            $args = array('post_type' => 'post', 'posts_per_page' => 7);
+                            $loop = new WP_Query($args);
+                            if ($loop->have_posts()) : ?>
+                                <div class="latest__posts__container mt-4 lg:mt-10 grid grid-cols-1 gap-6">
+                                    <?php
+                                    while ($loop->have_posts()) : $loop->the_post(); ?>
+                                        <?php
+                                        get_template_part(
+                                            'template-parts/items/item',
+                                            'latest',
+                                        );
+                                        ?>
+                                    <?php endwhile; ?>
+                                    <!-- post navigation -->
+                                </div>
+                            <?php else : ?>
+                                <!-- no posts found -->
+                            <?php endif; ?>
+                        </div>
+                    <?php
+                    }
+                    ?>
                 </div>
 
                 <!-- **** -->
