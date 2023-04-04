@@ -128,7 +128,7 @@
     @screen lg {
         display: grid;
         gap:1rem;
-        height: 560px;
+        height: 520px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
@@ -140,14 +140,14 @@
     .grid__posts__item1{        
         grid-area: a; 
     }
-    .grid__posts__item2{
+    .item__post2{
         grid-area: b; 
 
     }
-    .grid__posts__item3{
+    .item__post3{
         grid-area: c; 
     }
-    .grid__posts__item4{
+    .item__post4{
         grid-area: d; 
     }
 }
