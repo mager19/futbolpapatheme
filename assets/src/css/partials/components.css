@@ -128,7 +128,7 @@
     @screen lg {
         display: grid;
         gap:1rem;
-        height: 520px;
+        height: 561px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
@@ -142,7 +142,6 @@
     }
     .item__post2{
         grid-area: b; 
-
     }
     .item__post3{
         grid-area: c; 
@@ -154,7 +153,7 @@
 
 .item__post{
     .image{
-        @apply h-[127] w-full;
+        @apply h-[127px] w-full;
 
         img{
             @apply h-full w-full object-cover;
