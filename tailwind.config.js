@@ -1,7 +1,7 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-    content: ["./*.php", "./*/*/*.php", "./assets/**/*.js"],
+    content: ["./*.php", "./*/*.php", "./*/*/*.php", "./assets/**/*.js"],
 
     theme: {
         extend: {

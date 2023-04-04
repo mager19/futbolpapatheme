@@ -4,7 +4,7 @@
     </div>
     <div class="content w-full md:w-7/12">
         <h4 class="title"><?php the_title(); ?></h4>
-        <p><?php $content = get_the_excerpt();
+        <p class='title--body text-text'><?php $content = get_the_excerpt();
             echo wp_trim_words($content, 20, '...');
         ?>
         </p>
