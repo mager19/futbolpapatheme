@@ -122,76 +122,36 @@ get_header(); ?>
                         <?php endif; ?>
                     </div>
 
-                    <!-- **** -->
-                    <!-- Latest Posts -->
-                    <?php
-                    $showLatestPosts = get_field('show');
-                    if ($showLatestPosts) { ?>
-                        <div class="latest__posts__section flex flex-wrap mt-6 lg:mt-10">
-                            <div class="titleSection w-full">
-                                <!-- Featured Posts -->
-                                <?php get_template_part(
-                                    'template-parts/title',
-                                    'section',
-                                    array(
-                                        'title' => "Latest Posts",
-                                        'links' => true
-                                    )
-                                ); ?>
-                            </div>
-                        </div>
-
-                        <?php
-                        $args = array('post_type' => 'post', 'posts_per_page' => 7);
-                        $loop = new WP_Query($args);
-                        if ($loop->have_posts()) : ?>
-                            <div class="latest__posts__container mt-4 lg:mt-10 grid grid-cols-1 gap-6">
-                                <?php
-                                while ($loop->have_posts()) : $loop->the_post(); ?>
-                                  <?php
-                                    get_template_part(
-                                        'template-parts/items/item',
-                                        'latest',
-                                    );
-                                    ?>
-                                <?php endwhile; ?>
-                                <!-- post navigation -->
-                            <?php else : ?>
-                                <!-- no posts found -->
-                            </div>
-                        <?php endif; ?>
-                    <?php
-                    }
-                    ?>
+                    
 
                 </div>
 
+                <!-- **** -->
+                <!-- Aside -->
 
+                <div class="aside hidden md:block md:w-4/12 bg-slate-100">
+                    <h5>Categories</h5>
+                    <?php
+                    $categories = get_categories(array(
+                        'orderby' => 'name',
+                        'order'   => 'ASC'
+                    ));
+
+
+                    foreach ($categories as $category) {
+                        $category_link = sprintf(
+                            '<a href="%1$s" alt="%2$s">%3$s</a>',
+                            esc_url(get_category_link($category->term_id)),
+                            esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $category->name)),
+                            esc_html($category->name)
+                        );
+                        echo '<p>' . $category_link;
+                        echo ' (' . $category->count . ')</p>';
+                    } ?>
+                </div>
             </div>
 
-            <!-- **** -->
-            <!-- Aside -->
 
-            <div class="aside hidden md:block md:w-4/12 bg-slate-100">
-                <h5>Categories</h5>
-                <?php
-                $categories = get_categories(array(
-                    'orderby' => 'name',
-                    'order'   => 'ASC'
-                ));
-
-
-                foreach ($categories as $category) {
-                    $category_link = sprintf(
-                        '<a href="%1$s" alt="%2$s">%3$s</a>',
-                        esc_url(get_category_link($category->term_id)),
-                        esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $category->name)),
-                        esc_html($category->name)
-                    );
-                    echo '<p>' . $category_link;
-                    echo ' (' . $category->count . ')</p>';
-                } ?>
-            </div>
         </div>
     </div>
 </div>
