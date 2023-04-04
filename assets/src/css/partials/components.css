@@ -162,9 +162,12 @@
 }
 
 .item__latest{
-    img{
-        @apply md:h-full object-cover;
-    }
+    .image{
+        @apply lg:h-[180px];
+        img{
+            @apply md:h-full object-cover;
+        }
+    }  
 
     .title{
         @apply mb-2;

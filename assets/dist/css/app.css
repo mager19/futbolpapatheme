@@ -2235,13 +2235,19 @@ blockquote p {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.item__latest img {
+@media (min-width: 1024px) {
+
+  .item__latest .image {
+    height: 180px;
+  }
+}
+.item__latest .image img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (min-width: 768px) {
 
-  .item__latest img {
+  .item__latest .image img {
     height: 100%;
   }
 }
