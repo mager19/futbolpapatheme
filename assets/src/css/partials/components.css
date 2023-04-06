@@ -7,7 +7,7 @@
     &__primary {
         @apply bg-secondary text-white hover:opacity-90;
 
-        &:visited{
+        &:visited {
             @apply text-white;
         }
     }
@@ -34,10 +34,8 @@
             "a a c d";
     }
 
-
-
     .grid__posts__item1 {
-        @screen lg{
+        @screen lg {
             grid-area: a;
         }
 
@@ -47,7 +45,7 @@
         }
     }
     .grid__posts__item2 {
-        @screen lg{
+        @screen lg {
             grid-area: b;
         }
 
@@ -107,31 +105,26 @@
     }
 }
 
-.title__section{
+.title__section {
     @apply pb-2 relative justify-between;
-    border-bottom: 2px solid theme('colors.text');
+    border-bottom: 2px solid theme("colors.text");
 
-    &:before{
+    &:before {
         @apply bg-secondary absolute;
-        content:'';
+        content: "";
         display: block;
         width: 50px;
-        height:6px;
-        bottom:-4px;
-        
+        height: 6px;
+        bottom: -4px;
     }
-    
 }
 
-.featured__post{
-
+.featured__post {
     @apply flex flex-wrap gap-4 mt-4 lg:mt-10;
-
-   
 
     @screen lg {
         display: grid;
-        gap:1rem;
+        gap: 1rem;
         height: 561px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -141,39 +134,40 @@
             "a a d";
     }
 
-    .grid__posts__item1{        
-        grid-area: a; 
+    .grid__posts__item1 {
+        grid-area: a;
     }
-    .item__post2{
-        grid-area: b; 
+    .item__post2 {
+        grid-area: b;
     }
-    .item__post3{
-        grid-area: c; 
+    .item__post3 {
+        grid-area: c;
     }
-    .item__post4{
-        grid-area: d; 
+    .item__post4 {
+        grid-area: d;
     }
 }
 
-.item__post{
-    .image{
+.item__post {
+    @apply w-full;
+    .image {
         @apply h-[127px] w-full;
 
-        img{
+        img {
             @apply h-full w-full object-cover;
         }
     }
 }
 
-.item__latest{
-    .image{
+.item__latest {
+    .image {
         @apply lg:h-[180px];
-        img{
+        img {
             @apply md:h-full object-cover;
         }
-    }  
+    }
 
-    .title{
+    .title {
         @apply mb-2;
     }
 
@@ -183,5 +177,64 @@
         letter-spacing: 0.5px;
         text-transform: capitalize !important;
     }
+}
 
+.about__content {
+    p {
+        @apply text-text title--body;
+    }
+
+    a {
+        @apply text-secondary font-bold hover:opacity-80 visited:text-secondary;
+    }
+}
+
+.follow__futbol__papa {
+    a div {
+        &:before {
+            @apply text-secondary;
+            font-size: 2rem;
+        }
+    }
+}
+
+.search {
+    span {
+        @apply text-text font-bold uppercase;
+    }
+
+    form {
+        @apply flex flex-wrap gap-4;
+
+        label {
+            @apply w-full;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        input[type="search"] {
+            @apply h-12 mt-2 pl-2;
+            border: 2px solid theme("colors.text");
+
+            &::placeholder {
+                @apply text-[14px] pl-2 font-bold text-secondary !important;
+            }
+        }
+
+        input[type="submit"] {
+            @apply  hidden;
+        }
+    }
+}
+
+.cats{
+    p{
+        @apply text-text font-bold;
+    }
+
+    a{
+        @apply title--5 text-text visited:text-text hover:opacity-80;
+    }
 }

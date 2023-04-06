@@ -167,26 +167,113 @@ get_header(); ?>
 
                 <!-- **** -->
                 <!-- Aside -->
+                <div class="aside hidden md:block md:w-4/12 bg-primary-lighter p-4">
+                    <div class="about__section">
+                        <?php
+                        $imageAbout = get_field('about_futbol_papa_image', 'option');
+                        $contentAbout = get_field('about_futbol_papa_content', 'option');
 
-                <div class="aside hidden md:block md:w-4/12 bg-slate-100">
-                    <h5>Categories</h5>
-                    <?php
-                    $categories = get_categories(array(
-                        'orderby' => 'name',
-                        'order'   => 'ASC'
-                    ));
+                        if ($imageAbout || $contentAbout) { ?>
+                            <div class="titleSection">
+                                <!-- Featured Posts -->
+                                <?php get_template_part(
+                                    'template-parts/title',
+                                    'section',
+                                    array(
+                                        'title' => 'ABOUT FUTBOL PAPA®',
+                                        'links' => false
+                                    )
+                                ); ?>
+                            </div>
+                            <div class="about__section__content">
+                                <?php if ($imageAbout) { ?>
+                                    <div class="about__image mt-6">
+                                        <?php fps_get_Image($imageAbout); ?>
+                                    </div>
+                                <?php
+                                } ?>
+                                <?php
+                                if ($contentAbout) { ?>
+                                    <div class='about__content title--body text-text mt-4'>
+                                        <?php echo $contentAbout; ?>
+
+                                    </div>
+                                <?php
+                                }
+                                ?>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                        <?php
+                        $rows = get_field('social_icons', 'option');
+                        if ($rows) { ?>
+                            <div class="follow__futbol__papa">
+                                <div class="titleSection">
+                                    <!-- Featured Posts -->
+                                    <?php get_template_part(
+                                        'template-parts/title',
+                                        'section',
+                                        array(
+                                            'title' => 'FOLLOW FUTBOL PAPA®',
+                                            'links' => false
+                                        )
+                                    ); ?>
+                                </div>
+                                <div class="social__icons flex justify-start items-center gap-x-2 my-6">
+                                    <?php
+                                    foreach ($rows as $row) { ?>
+                                        <a href="<?php echo $row['social_profile']; ?>" target='_blank'>
+                                            <div class="icon-<?php echo $row['social_icon']['value']; ?>--d"></div>
+                                        </a>
+                                    <?php
+                                    } ?>
+                                </div>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
+                        <div class="search">
+                            <span>Search</span>
+                            <?php echo get_search_form(); ?>
+                        </div>
+
+                    </div>
+
+                    <div class="categories mt-7">
+                        <div class="titleSection">
+                            <!-- Featured Posts -->
+                            <?php get_template_part(
+                                'template-parts/title',
+                                'section',
+                                array(
+                                    'title' => 'CATEGORIES',
+                                    'links' => false
+                                )
+                            ); ?>
+                        </div>
+                        <div class="cats mt-4">
+                            <?php
+                            $categories = get_categories(array(
+                                'orderby' => 'name',
+                                'order'   => 'ASC'
+                            ));
 
 
-                    foreach ($categories as $category) {
-                        $category_link = sprintf(
-                            '<a href="%1$s" alt="%2$s">%3$s</a>',
-                            esc_url(get_category_link($category->term_id)),
-                            esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $category->name)),
-                            esc_html($category->name)
-                        );
-                        echo '<p>' . $category_link;
-                        echo ' (' . $category->count . ')</p>';
-                    } ?>
+                            foreach ($categories as $category) {
+                                $category_link = sprintf(
+                                    '<a href="%1$s" alt="%2$s">%3$s</a>',
+                                    esc_url(get_category_link($category->term_id)),
+                                    esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $category->name)),
+                                    esc_html($category->name)
+                                );
+                                echo '<p>' . $category_link;
+                                echo ' (' . $category->count . ')</p>';
+                            } ?>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
