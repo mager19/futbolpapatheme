@@ -1,0 +1,12 @@
+.single__post {
+    p {
+        @apply text-text font-normal font-manrope;
+    }
+
+    .featuredImage {
+        @apply mt-0;
+        img {
+            @apply w-full object-cover;
+        }
+    }
+}

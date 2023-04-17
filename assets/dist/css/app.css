@@ -2369,6 +2369,20 @@ blockquote p {
 .cats a:hover {
   opacity: 0.8;
 }
+.single__post p {
+  font-family: manrope, sans-serif;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(30 34 40 / var(--tw-text-opacity));
+}
+.single__post .featuredImage {
+  margin-top: 0px;
+}
+.single__post .featuredImage img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .visible {
   visibility: visible;
 }
@@ -2419,9 +2433,6 @@ blockquote p {
 }
 .mt-7 {
   margin-top: 1.75rem;
-}
-.mt-8 {
-  margin-top: 2rem;
 }
 .block {
   display: block;
@@ -2737,6 +2748,16 @@ blockquote p {
     order: 2;
   }
 
+  .lg\:my-10 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
@@ -2761,8 +2782,24 @@ blockquote p {
     width: 33.333333%;
   }
 
+  .lg\:w-9\/12 {
+    width: 75%;
+  }
+
+  .lg\:w-10\/12 {
+    width: 83.333333%;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:flex-nowrap {
@@ -2785,9 +2822,19 @@ blockquote p {
     gap: 2rem;
   }
 
+  .lg\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .lg\:py-14 {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:text-left {
