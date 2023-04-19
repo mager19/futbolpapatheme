@@ -700,7 +700,7 @@ body {
 }
 
 p {
-    @apply mb-4 text-dark-3;
+    @apply mb-4 text-text;
     hyphens: none;
     word-break: keep-all;
     word-wrap: normal;

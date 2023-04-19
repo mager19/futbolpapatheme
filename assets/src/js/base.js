@@ -17,5 +17,6 @@ import "slick-carousel/slick/slick-theme.css";
         autoplaySpeed: 3000,
         autoplay: true,
         speed: 500,
+        fade:true,
     });
 })(jQuery);

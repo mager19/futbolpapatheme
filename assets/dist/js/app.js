@@ -34,6 +34,7 @@ window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_0___default());
         autoplaySpeed: 3000,
         autoplay: true,
         speed: 500,
+        fade:true,
     });
 })(jQuery);
 

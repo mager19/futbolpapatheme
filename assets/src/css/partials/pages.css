@@ -10,3 +10,54 @@
         }
     }
 }
+
+.hero__about {
+    &--left {
+        @apply order-2 mt-4 text-center lg:order-1 md:mt-0 md:text-left;
+        .title {
+            @apply title--4 lg:title--3 text-text font-book;
+        }
+
+        .logos {
+            @apply mt-4;
+            .item__logo {
+                @apply flex items-center justify-center;
+                img {
+                    @apply max-h-[100px] object-contain;
+                }
+            }
+        }
+
+        .social__icons {
+
+            a div{
+                &:before {
+                    @apply text-secondary;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    &--right {
+        @apply order-1 lg:order-2 w-full;
+
+        .item {
+            @apply w-full h-[350px] lg:h-[550px];
+            img {
+                @apply w-full h-full object-cover;
+            }
+        }
+    }
+}
+
+.contact__info {
+    strong {
+        @apply text-secondary font-bold;
+    }
+
+    a,
+    p {
+        @apply text-text font-bold;
+    }
+}
