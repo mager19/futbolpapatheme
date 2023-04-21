@@ -274,6 +274,22 @@ get_header(); ?>
                         </div>
                     </div>
 
+                    <?php
+                    if (have_rows('logos_accreditations', 'option')) : ?>
+
+                        <div class="logos grid grid-cols-2 gap-4 mt-10">
+                            <?php while (have_rows('logos_accreditations', 'option')) : the_row(); ?>
+                                <div class="item__logo flex items-center">
+                                    <?php $logo = get_sub_field('logo', 'option'); ?>
+
+                                    <?php
+                                    fps_get_Image($logo);
+                                    ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                    <?php endif; ?>
+
                 </div>
             </div>
 
