@@ -76,6 +76,43 @@ if (!is_404()) {
 </footer>
 <!--/ Footer -->
 
+<div id="modal-custom-1b" class="modalMenu menuModal">
+    <div class="modal__header">
+        <button data-iziModal-close class="icon-close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L15 15M1 15L15 1" stroke="#A9E1D3" stroke-width="2" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="modal__content relative">
+        <?php
+        $GETlogo = get_field('logo_site', 'option'); ?>
+        <a href="<?php echo esc_url(get_bloginfo('url')); ?>">
+            <figure>
+                <?php if ($GETlogo) {
+                    fps_get_Image($GETlogo);
+                }  ?>
+            </figure>
+        </a>
+        <div class="menuMobileModal flex">
+            <!--Menu-->
+            <?php
+            if (has_nav_menu('menu-1')) { ?>
+
+                <?php
+                wp_nav_menu(array('theme_location' => 'menu-1'));
+                ?>
+
+            <?php
+            }
+            ?>
+            <!--/Menu-->
+        </div>
+    </div>
+
+</div>
+
 <!-- bottom bar -->
 <?php get_template_part('template-parts/bottom', 'bar'); ?>
 <?php wp_footer(); ?>

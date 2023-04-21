@@ -61,3 +61,152 @@
         @apply text-text font-bold;
     }
 }
+
+.price__item{
+    @apply text-white py-10 px-6;
+    
+    span{
+        @apply title--button font-bold;
+    }
+
+    .price{
+        @apply title--4 lg:title--3 text-white;
+    }
+
+    p{
+        @apply text-white;
+    }
+
+    ul{
+        @apply ml-4 mb-8;
+
+        li{
+            @apply title--6;
+        }
+       
+    }
+}
+
+.price__item--1{
+    @apply bg-[#61876E];
+}
+
+.price__item--2{
+    @apply bg-[#00425A];
+}
+
+.price__item--3{
+    @apply bg-alternate;
+}
+
+
+
+.menuModal {
+    .iziModal-content {
+        @apply bg-white text-text;
+
+        .modal__content {
+            /* @apply px-7 !important; */
+
+            p{
+                @apply text-white;
+            }
+
+            img {
+                width: 80%;
+                height: auto;
+                object-fit: cover;
+                margin: 0 auto;
+            }
+
+            ul {
+                @apply ml-4 mt-5;
+
+                li {
+                    list-style: disc;
+                    a {
+                        @apply text-text font-semibold visited:text-text;
+                        letter-spacing: 1px;
+                        transition: all 0.3s linear;
+
+                        &:hover {
+                            @apply text-primary-lighter;
+                        }
+
+                        &:visited {
+                            @apply text-text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal__header {
+    text-align: right;
+
+    button {
+        @apply bg-transparent border-0;
+
+        svg {
+            path {
+                stroke: #e7cfc4 !important;
+            }
+        }
+    }
+}
+
+.iziModal-content {
+    @apply px-8 pt-4 pb-8 !important;
+}
+
+.joinModal{
+    max-width: 800px;
+}
+
+
+
+
+
+.joinModal {
+    .iziModal-content {
+        @apply bg-text text-white;
+
+        .modal__content {
+            /* @apply px-7 !important; */
+
+            p{
+                @apply text-white;
+            }
+
+            img {
+                width: 80%;
+                height: auto;
+                object-fit: cover;
+                margin: 0 auto;
+            }
+
+            ul {
+                @apply ml-4 mt-5;
+
+                li {
+                    list-style: disc;
+                    a {
+                        @apply text-primary font-semibold;
+                        letter-spacing: 1px;
+                        transition: all 0.3s linear;
+
+                        &:hover {
+                            @apply text-primary-lighter;
+                        }
+
+                        &:visited {
+                            @apply text-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
