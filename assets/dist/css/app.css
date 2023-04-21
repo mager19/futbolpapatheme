@@ -2641,6 +2641,44 @@ blockquote p {
   --tw-text-opacity: 1;
   color: rgb(60 132 171 / var(--tw-text-opacity));
 }
+.menu-item-has-children {
+  position: relative;
+}
+.menu-item-has-children:hover .sub-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.menu-item-has-children .sub-menu {
+  position: absolute;
+  left: 0px;
+  margin-left: 0.5rem;
+  display: none;
+  height: auto;
+  width: 250px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+@media (min-width: 1024px) {
+
+  .menu-item-has-children .sub-menu {
+    padding: 1rem;
+  }
+}
+.menu-item-has-children .sub-menu {
+        z-index: 1;
+    }
+.menu-item-has-children .sub-menu li {
+  margin-left: 0px !important;
+
+            list-style: none;
+}
 .visible {
   visibility: visible;
 }

@@ -210,3 +210,24 @@
         }
     }
 }
+
+.menu-item-has-children {
+    @apply relative;
+
+    &:hover {
+        .sub-menu {
+            @apply flex flex-wrap justify-start gap-4;
+        }
+    }
+
+    .sub-menu {
+        @apply absolute hidden bg-white w-[250px] h-auto px-8 lg:p-4 left-0 ml-2 shadow;
+        z-index: 1;
+
+        li {
+            @apply ml-0 !important;
+
+            list-style: none;
+        }
+    }
+}
