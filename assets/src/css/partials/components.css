@@ -161,6 +161,10 @@
             @apply h-full w-full object-cover;
         }
     }
+
+    a{
+        @apply text-text visited:text-text hover:opacity-80 hover:text-text;
+    }
 }
 
 .item__latest {
@@ -173,6 +177,10 @@
 
     .title {
         @apply mb-2;
+    }
+
+    a{
+        @apply text-text visited:text-text hover:opacity-80 hover:text-text;
     }
 
     span {

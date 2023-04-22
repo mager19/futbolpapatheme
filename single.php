@@ -12,6 +12,7 @@ get_header(); ?>
     <div class="container mx-auto">
         <div class="flex flex-wrap px-4 md:px-0">
             <div class="w-full lg:w-10/12 lg:mx-auto">
+                <h1 class="title--4 lg:title--3 text-center"><?php the_title(); ?></h1>
                 <?php while (have_posts()) : the_post(); ?>
                     <?php
                     if (has_post_thumbnail()) { ?>
@@ -20,6 +21,12 @@ get_header(); ?>
                             the_post_thumbnail();
                             ?>
                         </figure>
+                    <?php
+                    }
+                    if (get_the_post_thumbnail_caption()) { ?>
+                        <span class="text-dark-3 title--caption justify-center lg:justify-end flex mb-4">
+                            <?php echo get_the_post_thumbnail_caption(); ?>
+                        </span>
                     <?php
                     }
                     ?>
@@ -44,7 +51,7 @@ get_header(); ?>
                 )
             ); ?>
         </div>
-        <?php 
+        <?php
         $args =  array(
             'post_type' => 'post',
             'posts_per_page' => 4,

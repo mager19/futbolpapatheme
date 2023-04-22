@@ -3,6 +3,10 @@
         <?php echo get_the_post_thumbnail(); ?>
     </div>
     <div class="content flex items-center">
-        <h6 class='title mb-0'><?php the_title(); ?></h6>
+        <h6 class='title mb-0'>
+            <a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?>
+            </a>
+        </h6>
     </div>
 </div>
