@@ -250,3 +250,25 @@
         @apply title--5 text-text visited:text-text hover:opacity-80;
     }
 }
+
+.info-post .title{
+    @apply normal-case !important;
+
+    a{
+        @apply no-underline !important;
+    }
+}
+
+.custom-pagination{
+    @apply text-center mt-8;
+   a{
+    @apply text-secondary visited:text-secondary no-underline !important;
+   } 
+
+   .current{
+    @apply bg-secondary text-white inline-flex justify-center items-center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+   }
+}

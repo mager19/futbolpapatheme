@@ -1649,6 +1649,11 @@ blockquote p {
     text-transform: uppercase;
   }
 }
+.site-footer {
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(31 138 112 / var(--tw-border-opacity));
+}
 @font-face {
   font-family: 'icomoon';
   src:  url(../css/fonts/icomoon.eot);
@@ -1694,6 +1699,15 @@ blockquote p {
 }
 .icon-facebook--d:before {
   content: "\e94a";
+}
+.icon-pinterest--d:before {
+  content: "\e91d";
+}
+.icon-reddit--d:before {
+  content: "\e921";
+}
+.icon-tumblr--d:before {
+  content: "\e922";
 }
 .fs1 {
   grid-column: span 3 / span 3;
@@ -2404,6 +2418,36 @@ blockquote p {
 .cats a:hover {
   opacity: 0.8;
 }
+.info-post .title {
+  text-transform: none !important;
+}
+.info-post .title a {
+  text-decoration-line: none !important;
+}
+.custom-pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+.custom-pagination a {
+  --tw-text-opacity: 1 !important;
+  color: rgb(31 138 112 / var(--tw-text-opacity)) !important;
+  text-decoration-line: none !important;
+}
+.custom-pagination a:visited {
+  color: rgb(31 138 112 ) !important;
+}
+.custom-pagination .current {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 138 112 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
 .single__post p {
   font-family: manrope, sans-serif;
   font-weight: 400;
@@ -2758,6 +2802,9 @@ blockquote p {
 .mt-10 {
   margin-top: 2.5rem;
 }
+.mt-2 {
+  margin-top: 0.5rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -2971,6 +3018,9 @@ blockquote p {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.no-underline {
+  text-decoration-line: none;
+}
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -3019,6 +3069,12 @@ blockquote p {
   line-height: 2.188rem;
   text-transform: uppercase;
 }
+.title--5 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+}
 .title--6 {
   font-weight: 700;
   font-size: 1rem;
@@ -3040,9 +3096,19 @@ blockquote p {
 .visited\:text-secondary:visited {
   color: rgb(31 138 112 );
 }
+.visited\:text-text:visited {
+  color: rgb(30 34 40 );
+}
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
   color: rgb(60 132 171 / var(--tw-text-opacity));
+}
+.hover\:text-text:hover {
+  --tw-text-opacity: 1;
+  color: rgb(30 34 40 / var(--tw-text-opacity));
+}
+.hover\:opacity-80:hover {
+  opacity: 0.8;
 }
 @media (min-width: 768px) {
 
@@ -3228,6 +3294,13 @@ blockquote p {
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 3.25rem;
+    text-transform: uppercase;
+  }
+
+  .lg\:title--5 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
     text-transform: uppercase;
   }
 }

@@ -15,11 +15,8 @@ get_header(); ?>
 
 <div class="container mx-auto py-14">
     <div class="info">
-
-        <h1 class="uppercase title--3 title-md--1">Blog</h1>
-
         <!-- List Post -->
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
             <?php while (have_posts()) : the_post(); ?>
 
                 <!-- Item Post -->
@@ -29,11 +26,15 @@ get_header(); ?>
                     </header>
 
                     <div class="info-post">
-                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                        <h2 class='title title--5 lg:title--5'>
+                            <a class='text-text visited:text-text hover:text-text  hover:opacity-80 no-underline mt-2 inline-flex' href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </h2>
 
-                        <?php the_excerpt(); ?>
+                        <?php echo wp_trim_words(get_the_content(), 30, '[...]'); ?>
 
-                        <a href="<?php the_permalink(); ?>" class="link">
+                        <?php //the_excerpt(); ?>
+
+                        <a class='flex mt-2' href="<?php the_permalink(); ?>" class="link">
                             <?php _e('Continue Reading', 'frontporchsolutions'); ?>
                         </a>
                     </div>
@@ -45,11 +46,11 @@ get_header(); ?>
         <!-- List Post -->
 
         <!-- Pagination -->
-        <?php if (function_exists('baseTheme__pagination')) : ?>
-            <div class="pagination">
-                <?php baseTheme__pagination($posts->max_num_pages, "", $paged); ?>
+     
+            <div class="pagination px-4">
+                <?php baseTheme__pagination($wp_query->max_num_pages, "", $paged); ?>
             </div>
-        <?php endif; ?>
+
         <!-- End Pagination -->
     </div>
 </div><!-- #main -->
