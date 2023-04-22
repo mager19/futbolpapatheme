@@ -275,6 +275,6 @@
 
 .header-post{
     img{
-        @apply h-[250px] w-auto object-cover;
+        @apply h-[250px] w-full object-cover;
     }
 }
