@@ -85,7 +85,7 @@ get_header(); ?>
                             <?php $button = get_sub_field('button');
                             if ($button) { ?>
                                 <a class='btn btn__primary ' href="<?php echo $button['url']; ?>" data-izimodal-open="#modal-custom-<?php echo $counter; ?>c">
-                                    <?php echo $button['title']; ?>
+                                    View All Benefits
                                 </a>
                             <?php
                             }

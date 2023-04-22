@@ -78,6 +78,10 @@
 
 .tag {
     @apply bg-secondary text-white inline-flex items-center justify-center py-0 px-2 font-bold font-manrope;
+
+    a{
+        @apply text-white visited:text-white;
+    }
 }
 
 .grid__posts__item {

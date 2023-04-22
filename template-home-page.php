@@ -260,7 +260,6 @@ get_header(); ?>
                                 'order'   => 'ASC'
                             ));
 
-
                             foreach ($categories as $category) {
                                 $category_link = sprintf(
                                     '<a href="%1$s" alt="%2$s">%3$s</a>',
@@ -269,7 +268,7 @@ get_header(); ?>
                                     esc_html($category->name)
                                 );
                                 echo '<p>' . $category_link;
-                                echo ' (' . $category->count . ')</p>';
+
                             } ?>
                         </div>
                     </div>
