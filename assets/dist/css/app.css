@@ -2448,6 +2448,12 @@ blockquote p {
     width: 20px;
     height: 20px;
 }
+.header-post img {
+  height: 250px;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .single__post p {
   font-family: manrope, sans-serif;
   font-weight: 400;
@@ -2853,8 +2859,14 @@ blockquote p {
 .hidden {
   display: none;
 }
+.h-20 {
+  height: 5rem;
+}
 .h-48 {
   height: 12rem;
+}
+.w-20 {
+  width: 5rem;
 }
 .w-3\/12 {
   width: 25%;

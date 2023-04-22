@@ -272,3 +272,9 @@
     height: 20px;
    }
 }
+
+.header-post{
+    img{
+        @apply h-[250px] w-auto object-cover;
+    }
+}

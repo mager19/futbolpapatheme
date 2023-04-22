@@ -22,7 +22,9 @@ get_header(); ?>
                 <!-- Item Post -->
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <header class="header-post">
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail(); ?>
+                        </a>
                     </header>
 
                     <div class="info-post">
@@ -32,7 +34,8 @@ get_header(); ?>
 
                         <?php echo wp_trim_words(get_the_content(), 30, '[...]'); ?>
 
-                        <?php //the_excerpt(); ?>
+                        <?php //the_excerpt(); 
+                        ?>
 
                         <a class='flex mt-2' href="<?php the_permalink(); ?>" class="link">
                             <?php _e('Continue Reading', 'frontporchsolutions'); ?>
@@ -46,10 +49,10 @@ get_header(); ?>
         <!-- List Post -->
 
         <!-- Pagination -->
-     
-            <div class="pagination px-4">
-                <?php baseTheme__pagination($wp_query->max_num_pages, "", $paged); ?>
-            </div>
+
+        <div class="pagination px-4">
+            <?php baseTheme__pagination($wp_query->max_num_pages, "", $paged); ?>
+        </div>
 
         <!-- End Pagination -->
     </div>
