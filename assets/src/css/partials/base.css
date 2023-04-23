@@ -923,3 +923,11 @@ blockquote {
         @apply border-secondary border;
     }
 }
+
+#wc-stripe-cc-form label{
+    font-size: 11px;
+}
+
+.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last{
+    width: 100%;
+}

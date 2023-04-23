@@ -1407,6 +1407,12 @@ blockquote p {
   --tw-border-opacity: 1;
   border-color: rgb(31 138 112 / var(--tw-border-opacity));
 }
+#wc-stripe-cc-form label{
+    font-size: 11px;
+}
+.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last{
+    width: 100%;
+}
 .site__nav ul {
   margin-bottom: 0px;
   display: flex;
