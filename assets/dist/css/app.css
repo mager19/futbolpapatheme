@@ -1326,24 +1326,83 @@ blockquote p {
 .content__page {
   position: relative;
 }
-/* &::before {
-    content: url("data:image/svg+xml, %3Csvg width='173' height='178' viewBox='0 0 173 178' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.25'%3E%3Cpath d='M89 16.6875C74.698 16.6875 60.7171 20.9286 48.8254 28.8744C36.9336 36.8202 27.6652 48.1138 22.192 61.3272C16.7188 74.5406 15.2868 89.0802 18.077 103.107C20.8672 117.135 27.7543 130.02 37.8674 140.133C47.9805 150.246 60.8653 157.133 74.8926 159.923C88.9198 162.713 103.459 161.281 116.673 155.808C129.886 150.335 141.18 141.066 149.126 129.175C157.071 117.283 161.313 103.302 161.313 89C161.292 69.8277 153.667 51.4465 140.11 37.8897C126.553 24.3329 108.172 16.7077 89 16.6875ZM142.205 119.19H118.829L112.39 110.318L121.172 84.7447L131.602 81.3446L149.847 95.3412C148.984 103.735 146.381 111.858 142.205 119.19ZM28.1741 95.3412L46.3843 81.3516L56.814 84.7516L65.5958 110.325L59.1711 119.19H35.7947C31.6141 111.859 29.0069 103.736 28.1393 95.3412H28.1741ZM35.1272 60.1306L38.9584 73.0634L28.3062 81.1916C29.2506 73.8167 31.5414 66.678 35.0646 60.1306H35.1272ZM75.7891 105.688L67.8208 82.4988L89 67.939L110.179 82.4988L102.211 105.688H75.7891ZM139.111 73.0634L142.942 60.1306C146.466 66.678 148.756 73.8167 149.701 81.1916L139.111 73.0634ZM134.8 48.4633L128.188 70.7689L117.709 74.169L94.5625 58.2602V47.4273L114.789 33.521C122.407 37.0838 129.215 42.169 134.793 48.4633H134.8ZM101.564 29.1127L89 37.7485L76.4357 29.1127C84.7222 27.3791 93.2778 27.3791 101.564 29.1127ZM63.2109 33.521L83.4375 47.4273V58.2602L60.2975 74.169L49.8192 70.7689L43.2068 48.4633C48.7847 42.169 55.5926 37.0838 63.2109 33.521ZM43.909 130.315H58.0725L63.0579 144.409C55.8185 141.003 49.3138 136.215 43.909 130.315ZM76.4844 148.887L68.2241 125.65L74.6418 116.812H103.358L109.776 125.65L101.55 148.887C93.2734 150.622 84.7267 150.622 76.4496 148.887H76.4844ZM114.977 144.409L119.962 130.315H134.126C128.711 136.219 122.194 141.006 114.942 144.409H114.977Z' fill='%231F8A70'/%3E%3C/g%3E%3C/svg%3E ");
-    position:absolute;
-    right:0;
-    top:20%;
-    width: 178px;
-    height: 178px;
-    z-index: -1;
-  } */
 .content__page::after {
     content: url("data:image/svg+xml, %3Csvg width=%27142%27 height=%27154%27 viewBox=%270 0 142 154%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg opacity=%270.7%27%3E%3Cpath d=%27M65 15.4C48.6627 15.4 32.9945 21.89 21.4422 33.4422C9.89001 44.9945 3.40002 60.6627 3.40002 77C3.40002 93.3374 9.89001 109.006 21.4422 120.558C32.9945 132.11 48.6627 138.6 65 138.6C81.3374 138.6 97.0056 132.11 108.558 120.558C120.11 109.006 126.6 93.3374 126.6 77C126.6 60.6627 120.11 44.9945 108.558 33.4422C97.0056 21.89 81.3374 15.4 65 15.4ZM42.6084 27.951L61.1654 38.7772V51.8672L39.8441 66.8976L27.8321 62.5317L23.0119 43.1893C28.2745 36.6594 34.9833 31.4427 42.6084 27.951ZM11.3618 82.3284L25.4297 69.8544L37.3339 74.1741L45.3804 99.5071L39.8595 107.769H20.7404C15.4852 100.233 12.2556 91.4724 11.3618 82.3284ZM52.4721 129.437L46.1966 112.143L51.6636 103.958H78.3595L83.8342 112.143L77.5587 129.429C69.3124 131.398 60.7185 131.406 52.4721 129.437ZM109.26 107.769H90.179L84.635 99.4917L92.5275 74.1818L104.593 69.839L118.638 82.3284C117.744 91.4724 114.515 100.233 109.26 107.769ZM107.027 43.2432L102.206 62.5163L90.0096 66.9053L68.8577 51.8749V38.7849L87.407 27.951C95.0454 31.4526 101.763 36.6858 107.027 43.2355V43.2432Z%27 fill=%27%231F8A70%27/%3E%3C/g%3E%3C/svg%3E");
     position:absolute;
+    opacity: 0.5;
     left:0;
     top:60%;
     width: 154px;
     height: 154px;
     z-index: -1;
   }
+.woocommerce select, .woocommerce .select2-selection__rendered {
+  height: 3rem !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(31 138 112 / var(--tw-border-opacity)) !important;
+}
+.woocommerce .add_to_cart_button, .woocommerce .single_add_to_cart_button, .woocommerce .button {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(31 138 112 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+.woocommerce .added_to_cart {
+  padding-left: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 138 112 / var(--tw-text-opacity));
+}
+.woocommerce .page-numbers .current {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(31 138 112 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+.woocommerce .cart {
+  display: flex;
+  flex-wrap: wrap;
+}
+.woocommerce .cart .quantity {
+  display: flex;
+}
+.woocommerce .woocommerce-message {
+  --tw-border-opacity: 1;
+  border-color: rgb(3 27 76 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 138 112 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.woocommerce .woocommerce-cart-form table {
+  padding: 1rem;
+}
+.woocommerce .woocommerce-info {
+  --tw-border-opacity: 1;
+  border-color: rgb(3 27 76 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 138 112 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.woocommerce .woocommerce-info:before {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.woocommerce .woocommerce-info a {
+  --tw-text-opacity: 1;
+  color: rgb(30 34 40 / var(--tw-text-opacity));
+}
+.woocommerce .woocommerce-info a:visited {
+  color: rgb(30 34 40 );
+}
+.woocommerce .woocommerce-info a:hover {
+  opacity: 0.8;
+}
+.woocommerce input {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(31 138 112 / var(--tw-border-opacity));
+}
 .site__nav ul {
   margin-bottom: 0px;
   display: flex;

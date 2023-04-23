@@ -21,7 +21,8 @@
     "dependencies": {
         "@babel/polyfill": "^7.11.5",
         "@tailwindcss/line-clamp": "^0.4.2",
-        "@tailwindcss/typography": "^0.5.9"
+        "@tailwindcss/typography": "^0.5.9",
+        "izimodal": "^1.6.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.21.0",
