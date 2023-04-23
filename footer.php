@@ -75,7 +75,8 @@ if (!is_404()) {
     </div>
 </footer>
 <!--/ Footer -->
-
+<?php 
+if (!is_checkout()) { ?>
 <div id="modal-custom-1b" class="modalMenu menuModal">
     <div class="modal__header">
         <button data-iziModal-close class="icon-close">
@@ -106,12 +107,14 @@ if (!is_404()) {
 
             <?php
             }
-            ?>
+    ?>
             <!--/Menu-->
         </div>
     </div>
 
 </div>
+
+<?php } ?>
 
 <!-- bottom bar -->
 <?php get_template_part('template-parts/bottom', 'bar'); ?>
