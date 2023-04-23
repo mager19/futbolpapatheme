@@ -931,3 +931,22 @@ blockquote {
 .woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last{
     width: 100%;
 }
+
+.woocommerce-MyAccount-navigation{
+    @apply bg-secondary text-white p-4;
+
+    ul{
+        @apply ml-6;
+
+        li{
+            a{
+                @apply text-white font-bold;
+            }
+        }
+    }
+}
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea{
+    @apply h-[50px];
+    border-radius: 5px;
+}

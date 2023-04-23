@@ -1413,6 +1413,25 @@ blockquote p {
 .woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last{
     width: 100%;
 }
+.woocommerce-MyAccount-navigation {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 138 112 / var(--tw-bg-opacity));
+  padding: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.woocommerce-MyAccount-navigation ul {
+  margin-left: 1.5rem;
+}
+.woocommerce-MyAccount-navigation ul li a {
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+  height: 50px;
+    border-radius: 5px;
+}
 .site__nav ul {
   margin-bottom: 0px;
   display: flex;
