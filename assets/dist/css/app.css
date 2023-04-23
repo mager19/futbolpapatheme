@@ -1337,7 +1337,6 @@ blockquote p {
     z-index: -1;
   }
 .woocommerce select, .woocommerce .select2-selection__rendered {
-  height: 3rem !important;
   --tw-border-opacity: 1 !important;
   border-color: rgb(31 138 112 / var(--tw-border-opacity)) !important;
 }
@@ -1364,6 +1363,11 @@ blockquote p {
 }
 .woocommerce .cart .quantity {
   display: flex;
+}
+.woocommerce .woocommerce-checkout-payment {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(31 138 112 / var(--tw-border-opacity));
 }
 .woocommerce .woocommerce-message {
   --tw-border-opacity: 1;

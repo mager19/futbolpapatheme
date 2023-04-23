@@ -868,7 +868,7 @@ blockquote {
 
 .woocommerce{
     select, .select2-selection__rendered{
-        @apply border-secondary h-12 !important;
+        @apply border-secondary !important;
     }
 
     .add_to_cart_button, .single_add_to_cart_button, .button{
@@ -893,7 +893,11 @@ blockquote {
         }
     }
 
-    .woocommerce-message{
+    .woocommerce-checkout-payment{
+        @apply border border-secondary;
+    }
+
+    .woocommerce-message, {
         @apply bg-secondary text-white border-dark-1;
     }
 
