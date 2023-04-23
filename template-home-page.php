@@ -190,6 +190,13 @@ get_header(); ?>
                                     <div class="about__image mt-6">
                                         <?php fps_get_Image($imageAbout); ?>
                                     </div>
+
+                                    <?php if ($imageAbout['caption']) { ?>
+                                        <span class="text-dark-3 title--caption justify-center lg:justify-start flex mt-2 mb-4">
+                                            <?php echo $imageAbout['caption']; ?>
+                                        </span>
+                                    <?php
+                                    } ?>
                                 <?php
                                 } ?>
                                 <?php
@@ -268,7 +275,6 @@ get_header(); ?>
                                     esc_html($category->name)
                                 );
                                 echo '<p>' . $category_link;
-
                             } ?>
                         </div>
                     </div>

@@ -29,7 +29,7 @@ get_header(); ?>
 
                     <div class="info-post">
                         <h2 class='title title--5 lg:title--5'>
-                            <a class='text-text visited:text-text hover:text-text  hover:opacity-80 no-underline mt-2 inline-flex' href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <a class='text-text visited:text-text hover:text-text  hover:opacity-80 no-underline mt-4 inline-flex' href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h2>
 
                         <?php echo wp_trim_words(get_the_content(), 30, '[...]'); ?>
