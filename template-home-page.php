@@ -282,6 +282,18 @@ get_header(); ?>
                     <?php
                     if (have_rows('logos_accreditations', 'option')) : ?>
 
+                        <div class="titleSection mt-8">
+                            <!-- Featured Posts -->
+                            <?php get_template_part(
+                                'template-parts/title',
+                                'section',
+                                array(
+                                    'title' => 'ACCREDITATIONS',
+                                    'links' => false
+                                )
+                            ); ?>
+                        </div>
+
                         <div class="logos grid grid-cols-2 gap-4 mt-10">
                             <?php while (have_rows('logos_accreditations', 'option')) : the_row(); ?>
                                 <div class="item__logo flex items-center">
