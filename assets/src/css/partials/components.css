@@ -85,10 +85,16 @@
 }
 
 .grid__posts__item {
-    @apply backgroundSettings relative flex items-end pb-2 px-4 h-56 w-full lg:h-auto;
+    @apply backgroundSettings relative flex items-end pb-2 px-4 h-56 w-full lg:h-auto duration-300 ease-in-out transition-all cursor-pointer;
+
+    &:hover{
+        &:before{
+            opacity: 0.2;
+        }
+    }
 
     &:before {
-        @apply absolute w-full h-full left-0 top-0;
+        @apply absolute w-full h-full left-0 top-0 duration-300 ease-in-out transition-all;
         content: "";
         background-color: rgba(0, 0, 0, 0.6);
     }

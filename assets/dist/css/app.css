@@ -2260,10 +2260,14 @@ blockquote p {
   display: flex;
   height: 14rem;
   width: 100%;
+  cursor: pointer;
   align-items: flex-end;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 0.5rem;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2274,12 +2278,18 @@ blockquote p {
     height: auto;
   }
 }
+.grid__posts__item:hover:before{
+            opacity: 0.2;
+        }
 .grid__posts__item:before {
   position: absolute;
   left: 0px;
   top: 0px;
   height: 100%;
   width: 100%;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         content: "";
         background-color: rgba(0, 0, 0, 0.6);
 }
@@ -2550,8 +2560,16 @@ blockquote p {
 }
 .single__post .featuredImage {
   margin-top: 0px;
+  display: flex;
+}
+@media (min-width: 1024px) {
+
+  .single__post .featuredImage {
+    height: 350px;
+  }
 }
 .single__post .featuredImage img {
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2894,6 +2912,9 @@ blockquote p {
 .mb-4 {
   margin-bottom: 1rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -2911,9 +2932,6 @@ blockquote p {
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.mb-8 {
-  margin-bottom: 2rem;
 }
 .block {
   display: block;
@@ -3392,13 +3410,6 @@ blockquote p {
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 3.25rem;
-    text-transform: uppercase;
-  }
-
-  .lg\:title--4 {
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2.188rem;
     text-transform: uppercase;
   }
 

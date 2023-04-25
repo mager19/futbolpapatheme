@@ -9,7 +9,7 @@
     </div>
     <?php if($args['links']){ ?>
         <div class="right">
-            <a class='font-manrope font-bold text-secondary hover:text-primary visited:text-secondary' href="<?php echo esc_url(get_bloginfo('url')); ?>/blog/">View All</a>
+            <a class='font-manrope font-bold text-secondary hover:text-primary visited:text-secondary' href="<?php echo esc_url(get_bloginfo('url')); ?>/category/futbol-papas-blog/">View All</a>
         </div>   
     <?php 
     } ?>
