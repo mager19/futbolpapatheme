@@ -82,6 +82,8 @@
 
         li{
             @apply title--6;
+            text-transform: none;
+            font-weight: 400;
         }
        
     }

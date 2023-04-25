@@ -27,6 +27,10 @@ get_header(); ?>
                 <?php
                 if (have_rows('logos_accreditations', 'option')) : ?>
 
+                    <h3 class='text-text title--6 lg:title--5 mb-8'>
+                        ACCREDITATIONS
+                    </h3>
+
                     <div class="logos grid grid-cols-3 gap-4">
                         <?php while (have_rows('logos_accreditations', 'option')) : the_row(); ?>
                             <div class="item__logo">
