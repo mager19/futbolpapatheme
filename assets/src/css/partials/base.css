@@ -246,11 +246,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-    @apply text-primary;
+    @apply text-secondary font-bold
 }
 
 a:visited {
-    @apply text-primary;
+    @apply text-secondary;
 }
 
 a:hover,

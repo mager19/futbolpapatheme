@@ -15,6 +15,13 @@ get_header(); ?>
 
 <div class="container mx-auto py-14">
     <div class="info">
+        
+        <div class="flex px-4">
+            <div class="w-full">
+                <h3 class='inline-flex border-b-2 border-secondary title--4 lg:title--4 mb-8'><?php single_cat_title(); ?></h3>              
+            </div>
+        </div>
+
         <!-- List Post -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
             <?php while (have_posts()) : the_post(); ?>

@@ -31,7 +31,7 @@ get_header(); ?>
                         ACCREDITATIONS
                     </h3>
 
-                    <div class="logos grid grid-cols-3 gap-4">
+                    <div class="logos grid grid-cols-3 gap-4" id='seebelow'>
                         <?php while (have_rows('logos_accreditations', 'option')) : the_row(); ?>
                             <div class="item__logo">
                                 <?php $logo = get_sub_field('logo', 'option'); ?>

@@ -763,12 +763,13 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
+  font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(60 132 171 / var(--tw-text-opacity));
+  color: rgb(31 138 112 / var(--tw-text-opacity));
 }
 a:visited {
   --tw-text-opacity: 1;
-  color: rgb(60 132 171 / var(--tw-text-opacity));
+  color: rgb(31 138 112 / var(--tw-text-opacity));
 }
 a:hover,
 a:focus,
@@ -3053,8 +3054,18 @@ blockquote p {
 .border {
   border-width: 1px;
 }
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+.border-s {
+  border-inline-start-width: 1px;
+}
 .border-none {
   border-style: none;
+}
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(31 138 112 / var(--tw-border-opacity));
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;
@@ -3327,6 +3338,18 @@ blockquote p {
     margin-top: 3rem;
   }
 
+  .lg\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .lg\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -3410,6 +3433,13 @@ blockquote p {
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 3.25rem;
+    text-transform: uppercase;
+  }
+
+  .lg\:title--4 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.188rem;
     text-transform: uppercase;
   }
 
