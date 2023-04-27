@@ -4,9 +4,9 @@
     }
 
     .featuredImage {
-        @apply mt-0 lg:h-[350px] flex;
+        @apply mt-0 lg:w-[350px] flex;
         img {
-            @apply w-full h-full object-cover;
+            @apply w-full h-full object-contain;
         }
     }
 }

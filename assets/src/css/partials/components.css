@@ -284,3 +284,7 @@
         @apply h-[250px] w-full object-cover;
     }
 }
+
+.trending__bar--title span{
+    @apply text-white;
+}
