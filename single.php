@@ -16,7 +16,7 @@ get_header(); ?>
                 <?php while (have_posts()) : the_post(); ?>
                     <?php
                     if (has_post_thumbnail()) { ?>
-                        <figure class="featuredImage">
+                        <figure class="featuredImage w-full flex justify-center">
                             <?php
                             the_post_thumbnail();
                             ?>
@@ -24,7 +24,7 @@ get_header(); ?>
                     <?php
                     }
                     if (get_the_post_thumbnail_caption()) { ?>
-                        <span class="text-dark-3 title--caption justify-center lg:justify-end flex mb-4">
+                        <span class="text-dark-3 title--caption justify-center lg:justify-center flex mb-4">
                             <?php echo get_the_post_thumbnail_caption(); ?>
                         </span>
                     <?php

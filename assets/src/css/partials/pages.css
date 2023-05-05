@@ -4,7 +4,7 @@
     }
 
     .featuredImage {
-        @apply mt-0 lg:w-[350px] flex;
+        @apply mt-0 lg:w-[500px] flex justify-center mx-auto;
         img {
             @apply w-full h-full object-contain;
         }

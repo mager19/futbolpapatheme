@@ -903,7 +903,7 @@ blockquote {
 
     .woocommerce-cart-form {
         table{
-            @apply p-4;
+            @apply p-4 table !important;
         }
     }
 
