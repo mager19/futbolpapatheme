@@ -34,7 +34,7 @@ if (post_password_required())
             {
                 printf(
                     /* translators: 1: title. */
-                    esc_html_e('One thought on &ldquo;%1$s&rdquo;', 'frontporchsolutions'),
+                    esc_html_e('One comment on &ldquo;%1$s&rdquo;', 'frontporchsolutions'),
                     '<span>' . get_the_title() . '</span>'
                 );
             }
@@ -42,7 +42,7 @@ if (post_password_required())
             {
                 printf( // WPCS: XSS OK.
                     /* translators: 1: comment count number, 2: title. */
-                    esc_html(_nx('%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'frontporchsolutions')),
+                    esc_html(_nx('%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'frontporchsolutions')),
                     number_format_i18n($comment_count),
                     '<span>' . get_the_title() . '</span>'
                 );
@@ -52,7 +52,7 @@ if (post_password_required())
 
         <?php the_comments_navigation(); ?>
 
-        <ol class="comment-list">
+        <ol class="comment-list ml-2">
             <?php
             wp_list_comments(array(
                 'style'      => 'ol',

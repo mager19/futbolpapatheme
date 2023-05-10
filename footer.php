@@ -20,7 +20,7 @@ if (!is_404()) {
 ?>
 
 <!-- Footer -->
-<footer class="site-footer">
+<footer class="site-footer overflow-hidden">
     <div class="container mx-auto py-8">
         <div class="site__footer__content flex flex-wrap px-4 justify-center lg:justify-start">
             <div class="site__footer__logo w-full md:w-3/12 text-center lg:text-left flex justify-center">

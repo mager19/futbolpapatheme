@@ -280,8 +280,9 @@
 }
 
 .header-post{
+    @apply bg-gray-100;
     img{
-        @apply h-[250px] w-full object-cover;
+        @apply h-[250px] w-full object-contain;
     }
 }
 

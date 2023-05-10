@@ -246,7 +246,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-    @apply text-secondary font-bold
+    @apply text-secondary font-bold;
 }
 
 a:visited {
@@ -849,104 +849,143 @@ blockquote {
     }
 }
 
-.content__page{
+.content__page {
     @apply relative;
 
-    
-
-  &::after {
-    content: url("data:image/svg+xml, %3Csvg width='142' height='154' viewBox='0 0 142 154' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.7'%3E%3Cpath d='M65 15.4C48.6627 15.4 32.9945 21.89 21.4422 33.4422C9.89001 44.9945 3.40002 60.6627 3.40002 77C3.40002 93.3374 9.89001 109.006 21.4422 120.558C32.9945 132.11 48.6627 138.6 65 138.6C81.3374 138.6 97.0056 132.11 108.558 120.558C120.11 109.006 126.6 93.3374 126.6 77C126.6 60.6627 120.11 44.9945 108.558 33.4422C97.0056 21.89 81.3374 15.4 65 15.4ZM42.6084 27.951L61.1654 38.7772V51.8672L39.8441 66.8976L27.8321 62.5317L23.0119 43.1893C28.2745 36.6594 34.9833 31.4427 42.6084 27.951ZM11.3618 82.3284L25.4297 69.8544L37.3339 74.1741L45.3804 99.5071L39.8595 107.769H20.7404C15.4852 100.233 12.2556 91.4724 11.3618 82.3284ZM52.4721 129.437L46.1966 112.143L51.6636 103.958H78.3595L83.8342 112.143L77.5587 129.429C69.3124 131.398 60.7185 131.406 52.4721 129.437ZM109.26 107.769H90.179L84.635 99.4917L92.5275 74.1818L104.593 69.839L118.638 82.3284C117.744 91.4724 114.515 100.233 109.26 107.769ZM107.027 43.2432L102.206 62.5163L90.0096 66.9053L68.8577 51.8749V38.7849L87.407 27.951C95.0454 31.4526 101.763 36.6858 107.027 43.2355V43.2432Z' fill='%231F8A70'/%3E%3C/g%3E%3C/svg%3E  ");
-    position:absolute;
-    opacity: 0.5;
-    left:0;
-    top:60%;
-    width: 154px;
-    height: 154px;
-    z-index: -1;
-  }
+    &::after {
+        content: url("data:image/svg+xml, %3Csvg width='142' height='154' viewBox='0 0 142 154' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.7'%3E%3Cpath d='M65 15.4C48.6627 15.4 32.9945 21.89 21.4422 33.4422C9.89001 44.9945 3.40002 60.6627 3.40002 77C3.40002 93.3374 9.89001 109.006 21.4422 120.558C32.9945 132.11 48.6627 138.6 65 138.6C81.3374 138.6 97.0056 132.11 108.558 120.558C120.11 109.006 126.6 93.3374 126.6 77C126.6 60.6627 120.11 44.9945 108.558 33.4422C97.0056 21.89 81.3374 15.4 65 15.4ZM42.6084 27.951L61.1654 38.7772V51.8672L39.8441 66.8976L27.8321 62.5317L23.0119 43.1893C28.2745 36.6594 34.9833 31.4427 42.6084 27.951ZM11.3618 82.3284L25.4297 69.8544L37.3339 74.1741L45.3804 99.5071L39.8595 107.769H20.7404C15.4852 100.233 12.2556 91.4724 11.3618 82.3284ZM52.4721 129.437L46.1966 112.143L51.6636 103.958H78.3595L83.8342 112.143L77.5587 129.429C69.3124 131.398 60.7185 131.406 52.4721 129.437ZM109.26 107.769H90.179L84.635 99.4917L92.5275 74.1818L104.593 69.839L118.638 82.3284C117.744 91.4724 114.515 100.233 109.26 107.769ZM107.027 43.2432L102.206 62.5163L90.0096 66.9053L68.8577 51.8749V38.7849L87.407 27.951C95.0454 31.4526 101.763 36.6858 107.027 43.2355V43.2432Z' fill='%231F8A70'/%3E%3C/g%3E%3C/svg%3E  ");
+        position: absolute;
+        opacity: 0.5;
+        left: 0;
+        top: 60%;
+        width: 154px;
+        height: 154px;
+        z-index: -1;
+    }
 }
 
-.woocommerce{
-    select, .select2-selection__rendered{
+.woocommerce {
+    select,
+    .select2-selection__rendered {
         @apply border-secondary !important;
     }
 
-    .add_to_cart_button, .single_add_to_cart_button, .button{
+    .add_to_cart_button,
+    .single_add_to_cart_button,
+    .button {
         @apply bg-secondary text-white !important;
     }
 
-    .added_to_cart{
+    .added_to_cart {
         @apply text-secondary pl-2;
     }
 
-    .page-numbers{
-        .current{
+    .page-numbers {
+        .current {
             @apply bg-secondary text-white !important;
         }
     }
 
-    .cart{
+    .cart {
         @apply flex flex-wrap;
 
-        .quantity{
+        .quantity {
             @apply flex;
         }
     }
 
-    .woocommerce-checkout-payment{
+    .woocommerce-checkout-payment {
         @apply border border-secondary;
     }
 
-    .woocommerce-message, {
+    .woocommerce-message {
         @apply bg-secondary text-white border-dark-1;
     }
 
     .woocommerce-cart-form {
-        table{
+        table {
             @apply p-4 table !important;
         }
     }
 
-    .woocommerce-info{
+    .woocommerce-info {
         @apply bg-secondary text-white border-dark-1;
 
-        &:before{
+        &:before {
             @apply text-white;
         }
 
-        a{
+        a {
             @apply text-text hover:opacity-80 visited:text-text;
         }
     }
 
-    input{
+    input {
         @apply border-secondary border;
     }
 }
 
-#wc-stripe-cc-form label{
+#wc-stripe-cc-form label {
     font-size: 11px;
 }
 
-.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last{
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last {
     width: 100%;
 }
 
-.woocommerce-MyAccount-navigation{
+.woocommerce-MyAccount-navigation {
     @apply bg-secondary text-white p-4;
 
-    ul{
+    ul {
         @apply ml-6;
 
-        li{
-            a{
+        li {
+            a {
                 @apply text-white font-bold;
             }
         }
     }
 }
 
-.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea{
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
     @apply h-[50px];
     border-radius: 5px;
+}
+
+.comment {
+    @apply my-6 flex;
+}
+
+.comment-author {
+    @apply flex items-center gap-2;
+}
+
+.comment-metadata {
+    @apply mt-5;
+}
+
+.form-submit {
+    input[type="submit"] {
+        @apply flex items-center justify-center py-3 px-10 lg:px-20 font-bold bg-secondary text-white hover:opacity-80 hover:text-white;
+        border: 1px solid #1f8a70;
+        border-radius: 25px;
+        letter-spacing: 0.5px;
+
+       
+
+            &:visited {
+                @apply text-white;
+            }
+        }
+    
+}
+
+.reply{
+    a{
+        @apply text-secondary;
+    }
 }

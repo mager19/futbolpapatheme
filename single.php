@@ -37,6 +37,19 @@ get_header(); ?>
     </div>
 </div>
 
+
+<div class="comments bg-gray-100">
+    <div class="container mx-auto py-8 lg:py-12">
+        <div class="flex">
+            <div class="w-full px-4">
+                <?php if (comments_open()) {
+                    comments_template();
+                } ?>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Featured Posts -->
 <div class="container">
     <div class="futbol__papa__section flex flex-wrap px-4 my-6 lg:my-10 lg:px-0">
@@ -79,7 +92,6 @@ get_header(); ?>
         <?php endif; ?>
     </div>
 </div>
-
 
 <?php
 get_footer();
