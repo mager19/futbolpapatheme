@@ -42,9 +42,9 @@ get_header(); ?>
     <div class="container mx-auto py-8 lg:py-12">
         <div class="flex">
             <div class="w-full px-4">
-                <?php if (comments_open()) {
-                    comments_template();
-                } ?>
+                <?php
+                comments_template();
+                ?>
             </div>
         </div>
     </div>
