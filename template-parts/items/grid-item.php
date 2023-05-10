@@ -1,5 +1,5 @@
 <?php $background = get_the_post_thumbnail_url(); ?>
-<div class="grid__posts__item pb-4 grid__posts__item<?php echo $args['counter']; ?>" style='background-image:url(<?php echo $background; ?>);'>
+<div class="grid__posts__item pb-4 bg-top grid__posts__item<?php echo $args['counter']; ?>" style='background-image:url(<?php echo $background; ?>);'>
     <div class="content flex flex-wrap gap-1">
         <div class="tag">
             <?php $categories = get_the_category();
