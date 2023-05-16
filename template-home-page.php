@@ -16,7 +16,12 @@
 get_header(); ?>
 
 <div class="content__page">
-    <?php $posts = get_field('select_hero_posts'); ?>
+    <?php 
+    $args = array('post_type' => 'post', 'posts_per_page' => '4', 'category__not_in' => array(521) );
+    $posts = get_posts($args); 
+    
+    
+    ?>
     <?php if ($posts) : ?>
         <div class="container mx-auto py-4 md:py-8 lg:py-14">
             <div class="grid__posts px-4 md:px-0">
@@ -141,7 +146,7 @@ get_header(); ?>
                             </div>
 
                             <?php
-                            $args = array('post_type' => 'post', 'posts_per_page' => 7);
+                            $args = array('post_type' => 'post', 'posts_per_page' => 7, 'offset' => 5);
                             $loop = new WP_Query($args);
                             if ($loop->have_posts()) : ?>
                                 <div class="latest__posts__container mt-4 lg:mt-10 grid grid-cols-1 gap-6">
