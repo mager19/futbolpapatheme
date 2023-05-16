@@ -161,10 +161,10 @@
 .item__post {
     @apply w-full;
     .image {
-        @apply h-[127px] w-full;
+        @apply h-[127px] w-full bg-gray-100;
 
         img {
-            @apply h-full w-full object-cover;
+            @apply h-full w-full object-contain;
         }
     }
 
@@ -175,9 +175,9 @@
 
 .item__latest {
     .image {
-        @apply lg:h-[180px];
+        @apply lg:h-[180px] bg-gray-100;
         img {
-            @apply md:h-full object-cover;
+            @apply md:h-full object-contain;
         }
     }
 

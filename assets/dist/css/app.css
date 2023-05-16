@@ -2432,12 +2432,14 @@ blockquote p {
 .item__post .image {
   height: 127px;
   width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 .item__post .image img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .item__post a {
   --tw-text-opacity: 1;
@@ -2451,6 +2453,10 @@ blockquote p {
   color: rgb(30 34 40 / var(--tw-text-opacity));
   opacity: 0.8;
 }
+.item__latest .image {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
 @media (min-width: 1024px) {
 
   .item__latest .image {
@@ -2458,8 +2464,8 @@ blockquote p {
   }
 }
 .item__latest .image img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (min-width: 768px) {
 
