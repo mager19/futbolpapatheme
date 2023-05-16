@@ -17,7 +17,7 @@ get_header(); ?>
 
 <div class="content__page">
     <?php 
-    $args = array('post_type' => 'post', 'posts_per_page' => '4', 'category__not_in' => array(521) );
+    $args = array('post_type' => 'post', 'posts_per_page' => '4', 'category__not_in' => array(521,3820) );
     $posts = get_posts($args); 
     
     
