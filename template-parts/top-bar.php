@@ -8,9 +8,9 @@
                     <?php 
                         $current_user = wp_get_current_user();
 
-                        $membership = get_current_membership($current_user);
+                        // $membership = get_current_membership($current_user);
 
-                        echo $membership->plan_name;
+                        // echo $membership->plan_name;
                         
                     ?>
 
