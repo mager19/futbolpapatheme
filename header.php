@@ -40,8 +40,10 @@
                         if ( $user_membership ) {
                             $plan_id = $user_membership->plan_id;
                             $plan_name = get_post_field( 'post_title', $plan_id );
-                            echo $plan_name;
-                        } 
+                            echo 'El usuario ' . $current_user->user_login . ' está suscrito al plan ' . $plan_name;
+                        } else {
+                            echo 'El usuario ' . $current_user->user_login . ' no está suscrito a ningún plan de membresía.';
+                        }
                         
                     ?>
 
