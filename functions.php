@@ -31,6 +31,8 @@ require('inc/yoast-meta-description.php');
 /** CTA'S post type **/
 require('inc/cta-post-type.php');
 
+require_once( WP_PLUGIN_DIR . '/woocommerce-memberships/woocommerce-memberships.php' );
+
 
 if (function_exists('acf_add_options_page')) {
 	acf_add_options_page(array(

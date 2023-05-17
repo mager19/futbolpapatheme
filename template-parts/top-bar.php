@@ -1,18 +1,11 @@
 <!-- Topbar -->
+
 <div class="topbar">
     <div class="container mx-auto">
         <div class="flex">
             <div class="w-full flex items-center justify-between px-4">
                 <div class="topbar--left ">
 
-                    <?php 
-                        $current_user = wp_get_current_user();
-
-                        // $membership = get_current_membership($current_user);
-
-                        // echo $membership->plan_name;
-                        
-                    ?>
 
                     <?php if (is_user_logged_in()) { 
 

@@ -28,7 +28,22 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>    
+    <?php wp_body_open(); ?>   
+    
+    
+    <?php 
+                        $current_user = wp_get_current_user();
+                        $user_membership = wc_memberships_get_user_membership( $current_user->ID );
+
+
+
+                        if ( $user_membership ) {
+                            $plan_id = $user_membership->plan_id;
+                            $plan_name = get_post_field( 'post_title', $plan_id );
+                            echo $plan_name;
+                        } 
+                        
+                    ?>
 
     <div id="page" class="site">
         <!-- topbar -->
